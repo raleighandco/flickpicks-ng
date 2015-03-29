@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="FlickPicks">
+
+<head>
+    <title>Flick Picks</title>
+    <link rel="stylesheet" type="text/css" href="flickpicks.css">
+</head>
+
+<body ng-controller="Main">
+
+    <h1>Flick Picks</h1>
+    <h2>Pick your favorite flicks</h2>
+    <h3>Save all of your favorite movies here</h3>
+    <input type="text" id="movieName" placeholder="Enter your favorite movie name here" ng-keypress="saveToList($event)" ng-model="mvName" />
+    <h4>My Flick Picks</h4>
+    <ol id="favMovies">
+        <label ng-hide="movies.length">Loading.. Please wait</label>
+        <li ng-repeat="movie in movies">{{movie.name}} [
+            <a href="javascript:" ng-click="edit($index)">Edit</a> |
+            <a href="javascript:" ng-click="del($index)">Delete</a>
+        ]
+        </li>
+    </ol>
+    <script src=""></script>
+    <script src=""></script>
+    <script src=""></script>
+    <script src=""></script>
+</body>
+
+
+</html>
