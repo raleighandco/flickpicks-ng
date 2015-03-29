@@ -2,12 +2,12 @@
 <html ng-app="FlickPick">
  
 <head>
-    <title>Movie Fire</title>
+    <title>Flick Pick</title>
     <link rel="stylesheet" type="text/css" href="flickpick.css">
 </head>
  
 <body ng-controller="MainController">
-    <h1>Movie Fire</h1>
+    <h1>Flick Pick</h1>
     <h3>Save all your Favorite Movies here</h3>
     <hr />
     <input type="text" id="movieName" placeholder="Enter your Favorite Movie Name" ng-keypress="saveToList($event)" ng-model="mvName" />
@@ -19,8 +19,11 @@
             <a href="#" ng-click="del($index)">Delete</a>]
         </li>
     </ol>
+    <!-- Firebase Dependency -->
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <!-- Angular JS Dependency -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <!-- AngularFire JS Helper Library -->
     <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
- 
+    <!-- Flick Pick Js -->
     <script type="text/javascript" src="flickpicks.js"></script>
