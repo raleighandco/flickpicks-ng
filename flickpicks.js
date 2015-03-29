@@ -1,4 +1,4 @@
-var flickplick = angular.module("FlickPick", ["firebase"]);
+angular.module("FlickPick", ["firebase"]);
 
 function MainController($scope, $firebase) {
     $scope.favMovies = $firebase(new Firebase('https://flickpick.firebaseio.com/movies'));
